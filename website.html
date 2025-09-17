@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #f56c6c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      padding-left: 10%;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 80px;
+    }
+
+    .navbar ul li {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      display: flex;
+      font-size: 22px;
+      cursor: pointer;
+      padding-right: 30%;
+    }
+
+    /* First Section */
+    .hero {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .hero-text {
+      flex: 1;
+      background: linear-gradient(to right, #e6d98f, #dd9393);
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-text button {
+      background: #f56c6c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .hero-image {
+      flex: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Second Section */
+    .section-two {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 40px;
+      gap: 40px;
+      background: linear-gradient(to right, #ffe0b2, #f0a5bf);
+    }
+
+    /* Left Side (Image Grid) */
+    .image-grid {
+      flex: 1;
+      display: grid;
+      grid-template-areas: "street1 food1"
+        "street2 food1";
+      grid-gap: 15px;
+
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      border-radius: 8px;
+    }
+
+    .pic1{
+      grid-area: street1;
+      width: 100%;
+    }
+
+    .pic2 {
+      grid-area: street2;
+       width: 100%;
+    }
+
+    .pic3 {
+      grid-area: food1;
+       width: 100%;
+    }
+
+    /* Right Side (Text Box) */
+    .text-box {
+      flex: 1;
+      /* Takes less space */
+      background: linear-gradient(to bottom right, #ff6b6b, #ffa07a);
+      /* Red-orange gradient */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      color: #fff;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+
+
+
+
+    .text-box small {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .text-box h1 {
+      font-size: 40px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .text-box a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .text-box a::after {
+      content: " ➝";
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .section-two {
+        flex-direction: column;
+      }
+
+      .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .image-grid img:last-child {
+        grid-row: auto;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .navbar ul {
+        display: none;
+      }
+    }
+
+    .bin {
+      height: 50%;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li>Home</li>
+      <li>Order</li>
+      <li>Food</li>
+      <li>Restaurant</li>
+      <li>Testimonials</li>
+      <li>Contact Us</li>
+    </ul>
+    <div class="menu-icon">☰</div>
+  </nav>
+
+  <!-- First Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>LOREM IPSUM</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est vitae dolor rhoncus tristique.
+        Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam ut tristique.
+        Curabitur nec faucibus purus. Quisque congue sem nec justo mollis, in tincidunt erat pretium. Sed pulvinar,
+        massa ac porta viverra.
+      </p>
+      <button>Click Me</button>
+    </div>
+    <div class="hero-image">
+      <img src="food1.jpeg" alt="Burger and Fries">
+    </div>
+  </section>
+
+  <!-- Second Section -->
+  <section class="section-two">
+    <!-- Left: Image Grid -->
+    <div class="image-grid">
+      <div class="pic1">
+        <img src="street 1.jpeg" alt="Street 1">
+      </div>
+      <div class="pic2">
+        <img src="street 2.jpeg" alt="Street 2">
+      </div>
+      <div class="pic3">
+        <img src="food2.jpeg" alt="Food Big">
+      </div>
+    </div>
+
+    <!-- Right: Text Section -->
+    <div class="text-box">
+      <small>LOREM IPSUM</small>
+      <h1>LOREM IPSUM<br>SET ADEMIR</h1>
+      <a href="#">Click</a>
+    </div>
+  </section>
+</body>
+
+</html>
